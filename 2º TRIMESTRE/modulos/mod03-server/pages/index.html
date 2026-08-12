@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Band | Homepage</title>
+    <!-- Font Awesome para Ícones Modernos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts para Tipografia Rock n' Roll -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Metal+Mania&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset de Estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b0b0b;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            /* Imagem Base64 do Unsplash (Show de Rock com fumaça e luzes) */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QBYRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAwKADAAQAAAABAAAAwAAAAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCn/wAARCADAAIADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElU1RVVldYWVpjZGVmZ2hpanN0dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6p70tIKUUAFFJn3pc0AFFJS0AFFJmigAoozRQAUUUUAFFFFACHmlooFADXbapb05ryHwp8e/C+veMrjw/JHcafKszQW9xcFfLmYMRjj7ueMZyOetc5+1T8S9V8K2Wm6D4cka2vdRjaee5Xh0iB2hVPYk5yeuB718g2d5cWd8l3DIwuFfzBJnktnOSfWgD9TAc80VwXwR8bt48+Hem6tcgDUELW14FGB5qdSP94FW9t1d6KACiiigAooooAKKKKACiiigAooooAQUtIKKAPkn9svQL9fEui68kLyadNZ/ZGkVSRHIrs2G9Mhxj6H0r55itpZX2ojOeyqMmv04v8AT7TUrWS2v7aG5tpBh4pUDqw9weKxdI8C+FtGumuNK8P6Xazt1kit0DfiQM0AeZfsq+GLzQfhvPLfxSQS6jdtdJHICpEexVUkH1wT+Ir2wUiqFUBQABwAKWgAooooAKKKKACiiigAooooAKKKKACiiigBM84paKKACiiigAooooAKKKKACiiigD//Z");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Container Principal */
+        .container {
+            text-align: center;
+            background: rgba(20, 20, 20, 0.6);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 0, 60, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 0, 60, 0.1);
+            max-width: 450px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Ícone de Destaque */
+        .rock-icon {
+            font-size: 3.5rem;
+            color: #ff003c;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(255, 0, 60, 0.6);
+            animation: pulse 2s infinite;
+        }
+
+        /* Título Estilo Banda */
+        h3 {
+            font-family: 'Metal Mania', cursive;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        /* Texto de Boas-vindas */
+        p {
+            font-size: 1.1rem;
+            color: #b3b3b3;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* Botão / Rota Moderna */
+        .btn-route {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(45deg, #ff003c, #990024);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 0, 60, 0.4);
+        }
+
+        .btn-route:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 0, 60, 0.6);
+            background: linear-gradient(45deg, #ff1a4e, #b3002a);
+        }
+
+        .btn-route:active {
+            transform: translateY(-1px);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Ícone Moderno de Rock (Mão do Rock) -->
+        <div class="rock-icon">
+            <i class="fa-solid fa-hand-rock"></i>
+        </div>
+        
+        <h3>Página Inicial</h3>
+        <p>Olá, você está em casa! 🤘</p>
+        
+        <!-- Mantida a rota original /sobre com estilo de botão e ícone -->
+        <a href="/sobre" class="btn-route">
+            Ir para Sobre <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+</body>
+</html>
